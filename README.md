@@ -16,11 +16,11 @@ I've included .rvmrc and selected trinidad as the application server.
 1.  Install and configure RVM with jruby-1.6.7.
 2.  Check this code out from github.
 
-    $ git clone git://github.com/rpocklin/jruby-sinatra-heroku-skeleton.git
+        $ git clone git://github.com/rpocklin/jruby-sinatra-heroku-skeleton.git
 
 3.  Run a script (for the lazy) which will do all the following for you.
 
-    $ provision.sh
+        $ provision.sh
 
 
 
@@ -28,29 +28,29 @@ If you want to do it manually (or find out what it does...)
 
 1.  Go into the project directory and run:
 
-    $ jruby -S gem install bundler heroku
+        $ jruby -S gem install bundler heroku
 
 2.  Edit your Gemfile to update whatever you want in there.
 
 3.  Generate your Gemfile.lock and load dependencies:
 
-    $ jruby -S bundle install
+        $ jruby -S bundle install
 
 4.  Duplicate the Gemfile to Jemfile so that heroku knows its a JRuby app.
 
-    $ cp Gemfile Gemfile.lock
-    $ cp Gemfile.lock Jemfile.lock
+        $ cp Gemfile Gemfile.lock
+        $ cp Gemfile.lock Jemfile.lock
 
 5.  Initialise GIT
 
-    $ git init
-    $ git add .
-    $ git commit -m "Initial commit of repository"
+        $ git init
+        $ git add .
+        $ git commit -m "Initial commit of repository"
 
 6.  Initialise and push to Heroku (with cedar stack for java) this will give you the application URL (can be renamed by logging in to heroku.com)
 
-    $ heroku create --stack cedar
-    $ git push heroku master
+        $ heroku create --stack cedar
+        $ git push heroku master
 
 Once deployed...
 
