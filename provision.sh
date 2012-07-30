@@ -2,7 +2,7 @@
 jruby -S gem install bundler heroku
 jruby -S bundle install
 cp Gemfile Jemfile
-cp Jemfile.lock Jemfile.lock
+cp Gemfile.lock Jemfile.lock
 git init
 git add .
 git commit -m "Initial commit of repository"
