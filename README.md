@@ -38,7 +38,7 @@ If you want to do it manually (or find out what it does...)
 
 4.  Duplicate the Gemfile to Jemfile so that heroku knows its a JRuby app.
 
-        $ cp Gemfile Gemfile.lock
+        $ cp Gemfile Jemfile
         $ cp Gemfile.lock Jemfile.lock
 
 5.  Initialise GIT
