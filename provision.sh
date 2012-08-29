@@ -6,6 +6,6 @@ cp Gemfile.lock Jemfile.lock
 git init
 git add .
 git commit -m "Initial commit of repository"
-heroku create --stack cedar
+heroku create --stack cedar --buildpack http://github.com/heroku/heroku-buildpack-java.git
 git push heroku master
 heroku logs

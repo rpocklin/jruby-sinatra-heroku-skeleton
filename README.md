@@ -1,13 +1,11 @@
 # JRuby with Sinatra on Heroku Skeleton
 =========
 
-This is a bare bones sinatra app skeleton which will enable you to deploy
-JRuby apps using sinatra to Heroku.  
+This is a bare bones sinatra app skeleton which will enable you to deploy JRuby apps using sinatra to Heroku.  
 Heroku has supported Java for a little while now but documentation and how-to's are scant about deployment.
 
 ### Notes
-I've personally tested this in March 2012 with JRuby 1.6.7 and it works
-fine.
+I've personally tested this in September 2012 with JRuby 1.6.7.2 and it works fine.
 
 I've included .rvmrc and selected trinidad as the application server.
 
@@ -49,7 +47,7 @@ If you want to do it manually (or find out what it does...)
 
 6.  Initialise and push to Heroku (with cedar stack for java) this will give you the application URL (can be renamed by logging in to heroku.com)
 
-        $ heroku create --stack cedar
+        $ heroku create --stack cedar --buildpack http://github.com/heroku/heroku-buildpack-java.git
         $ git push heroku master
 
 Once deployed...
@@ -64,8 +62,10 @@ or to tail the logs in production:
 
 Test it responds correctly:
 
-    $ curl http://your_app.heroku.com/..../
+    $ curl http://your_app.heroku.com/
 
+You should get 'Waiting for an awesome API to be written... please come back later'
 and your done!
 
-Note:  You should include your library / app files in config.ru (eg. require 'zing') which is the bootstrap for sinatra.
+Note:  The example.rb file should be renamed/replaced with your own specific application code, and use server.rb
+for your sinatra routes.
